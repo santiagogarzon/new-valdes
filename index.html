@@ -8,22 +8,26 @@
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />
             <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="animate.css" media="screen" />
             <title>Valdes</title>
         </head>
     <header></header>
     <body>
             <div class="App">
                     <div id="container">
-                      <div id="logo" class="not-shown">
+                      <div id="logo">
                         <img src="/img/elements_home_desktop-01.png" alt="valdes"></img>
                       </div>
+                      <div id="logo-shows" class="not-shown">
+                          <img src="/img/logo-shows.png" alt="valdes"></img>
+                        </div>
                       <nav id="links" class="desktop">
-                        <button >SHOWS</button>
-                        <button >MÚSICA</button>
-                        <button >VIDEOS</button>
-                        <button >FOTOS</button>
-                        <button >TIENDA</button>
-                        <button >NOSOTRXS</button>
+                        <button onclick="goToShows()">SHOWS</button>
+                        <button onclick="goToMusic()">MÚSICA</button>
+                        <button onclick="goToVideos()">VIDEOS</button>
+                        <button onclick="goToFotos()">FOTOS</button>
+                        <button onclick="goToTienda()">TIENDA</button>
+                        <button onclick="goToNosotros()">NOSOTRXS</button>
                       </nav>
                       <div id="social-media">
                         <a id="instagram">
@@ -43,9 +47,100 @@
                         </a>
                       </div>
                       <section id="modal" class="open">
-                        <div id="shows" class='not-shown'>
+                        <div id="shows" class="">
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
+                          <div class="evento">
+                            <div class="details">
+                              <p class="fecha">22.02.2019</p>
+                              <p>CLUB BELLE EPOQUE</p>
+                              <p>CORDOBA</p>
+                            </div>
+                            <div class="place">
+                              <p>(ARG)</p>
+                            </div>
+                            <div class="button">
+                              <img src="/img/boton-entradas.png"> </img>
+                            </div>
+                          </div>
                         </div>
-                        <div id="musica" class='not-shown'>
+                        <div id="musica" class="">
                           <div class="music-big-container">
                             <div id="music-logo" class="shown">
                               <img src="img/logo-music.png" alt="valdes"></img>
@@ -117,9 +212,9 @@
                             </div>
                           </div>
                         </div>
-                        <div id="videos" class='not-shown'>
+                        <div id="videos" class="">
                         </div>
-                        <div id="fotos" class='not-shown'>
+                        <div id="fotos" class="">
                           <div>
                             <img src="img/foto1.jpg"></img>
                             <img src="img/foto2.jpg"></img>

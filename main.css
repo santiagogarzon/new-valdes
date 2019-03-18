@@ -45,7 +45,8 @@ body {
     color: white;
   }
   
-  #logo {
+  #logo,
+  #logo-shows {
       position: fixed;
       left: 50px;
       padding-left: 0;
@@ -60,7 +61,7 @@ body {
   .asdasd 
   {}
   
-  #logo.not-shown, #music.not-shown {
+  #logo.not-shown, #musica.not-shown, #logo-shows.not-shown {
     display: none;
   }
   
@@ -160,7 +161,7 @@ body {
     -webkit-overflow-scrolling: touch;
   }
   
-  #modal #music, #modal #fotos, #modal #tour, #modal #videos {
+  #modal #musica, #modal #fotos, #modal #tour, #modal #videos, #modal #shows {
     display: none;
     height: 100%;
   }
@@ -170,13 +171,17 @@ body {
     justify-content: flex-start;
   }
   
-  #modal #musica.show, #modal #fotos.show, #modal #shows.show, #modal #videos.show, #modal #nosotros.show {
+  #modal #fotos.show, #modal #shows.show, #modal #videos.show, #modal #nosotros.show {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }
   
+  #modal #musica.show {
+    display: inline;
+  }
+
   #modal #fotos img {
     max-width: 100%;
     display: block;
@@ -239,5 +244,20 @@ body {
   }
   
   .disc-picture img {
+    width: 100%;
+  }
+
+  .evento {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    flex-direction: row;
+    color: #E92200;
+    font-size: 20px;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  #shows {
     width: 100%;
   }
