@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Regular';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+.App {
+    text-align: center;
+    
+  }
+  
+  a, body, button, html {
+    font-family: 'Arial Regular';
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+  
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  #container {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  #logo {
+      position: fixed;
+      left: 50px;
+      padding-left: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 99;
+      pointer-events: none;
+  }
+  .asdasd 
+  {}
+  
+  #logo.not-shown, #music.not-shown {
+    display: none;
+  }
+  
+  #social-media {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 999;
+  }
+  
+  #social-media a {
+    margin: 0 5px;
+    cursor: pointer!important;
+  }
+  
+  #links {
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-right: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+    pointer-events: none;
+  }
+  
+  nav button {
+    display: block;
+    border: none;
+    background: none;
+    color: #E92200;
+    margin: 8px;
+    padding: 0;
+    font-size: 23pt;
+    font-weight: 300;
+    width: 208px;
+    text-align: right;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-decoration: none;
+    border-width: 0px;
+    pointer-events: auto;
+  }
+  
+  nav a:hover, nav button:hover {
+    cursor: pointer!important;
+    color: #050483;
+  }
+  
+  nav a.selected, nav button.selected {
+    color: #050483;
+  }
+  
+  nav a, nav a:hover, nav button, nav button:hover {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  
+  a:focus, button:focus {
+    outline: none;
+  }
+  
+  #modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  
+  #modal.open {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  #modal #fotos {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #modal #music, #modal #fotos, #modal #tour, #modal #videos {
+    display: none;
+    height: 100%;
+  }
+  
+  #modal #fotos.show {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  #modal #musica.show, #modal #fotos.show, #modal #shows.show, #modal #videos.show, #modal #nosotros.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  #modal #fotos img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+  
+  #musica {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #music-logo {
+    position: fixed;
+    top: 25px;
+    left: 50px;
+    z-index: 999;
+  }
+  
+  .music-container {
+    justify-content: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    margin: 100px 0 0 0;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  
+  .disc-name {
+    font-size: 12px;
+    color: #E92200;
+  }
+  
+  .disc-description {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .disc-links {
+    padding: 8px 0;
+    cursor: pointer!important;
+  }
+  
+  .disc-links a {
+    padding: 0 5px;
+  }
+  
+  .disc {
+    margin: 0 47px 20px;
+    width: 38%;
+  }
+  
+  html, body, .root, .container{
+    height: 100%;
+  }
+  
+  .music-big-container {
+    background-color: black;
+  }
+  
+  .disc-picture img {
+    width: 100%;
+  }
