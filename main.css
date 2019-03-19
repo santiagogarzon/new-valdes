@@ -330,30 +330,52 @@ button {
 }
 
 @media(max-width: 500px) {
-  #logo,
-  #logo-shows,
-  #links,
-  #social-media,
-  #links,
-  #links-mobile.not-shown,
-  #copyrights.not-shown {
-    display: none;
+  #music-logo {
+    left: auto;
+    width: 100%
   }
 
-  #links-mobile,
-  #logo-home-mobile {
-    display: block;
+  .disc {
+    width: 55%;
+    margin: 0 0 30px;
+  }
+
+  .music-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #music-logo img {
+    width: 35%;
+  }
+
+  #social-media {
+    right: auto;
+    top: 5%;
+    display: inline;
+  }
+
+  #social-media a{
+    margin: 0;
+  }
+
+  #social-media a img {
+    width: 10%;
+  }
+
+  #social-media #youtube img{
+    width: 25%;
   }
 
   #logo-home-mobile {
     position: absolute;
-    height: 100%;
+    height: 80%;
     top: 20%;    
     overflow: hidden;
   }
 
   #logo-home-mobile img {
-    height: 38%;
+    height: 55%;
   }
 
   .evento {
@@ -387,7 +409,8 @@ button {
   }
 
   #logo-shows-mobile.show,
-  #links-mobile.show {
+  #links-mobile.show,
+  #social-media.show {
     display: block;
   }
 
@@ -397,8 +420,8 @@ button {
 
   #mobile-close-icon {
     display: block;
-    color: red;
-    position: absolute;
+    color: #E92200;
+    position: fixed;
     top: 25px;
     right: 25px;
     font-size: 25px;
@@ -429,5 +452,23 @@ button {
     padding-right: 0;
   }
 
+  #logo,
+  #logo-shows,
+  #links,
+  #social-media,
+  #links,
+  #links-mobile.not-shown,
+  #copyrights.not-shown,
+  #mobile-close-icon,
+  #logo-home-mobile,
+  #musica {
+    display: none;
+  }
 
+  #links-mobile,
+  #logo-home-mobile.show,
+  #mobile-close-icon.show,
+  #musica.show {
+    display: block;
+  }
 }
