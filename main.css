@@ -405,7 +405,7 @@ button {
     display: none;
     width: 100%;
     position: absolute;
-    bottom: 15px;
+    bottom: 1%;
   }
 
   #logo-shows-mobile.show,

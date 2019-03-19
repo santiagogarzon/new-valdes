@@ -48,7 +48,7 @@ function goToFotosM() {
     document.getElementById('musica').className = 'animated slideOutUp';  
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
-    document.getElementById('logo-shows-mobile').className = 'show animated slideInUp';
+    document.getElementById('logo-shows-mobile').className = 'show animated slideOutUp';
     document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
