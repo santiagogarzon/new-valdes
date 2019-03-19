@@ -48,7 +48,7 @@ body {
   #logo,
   #logo-shows {
       position: fixed;
-      left: 50px;
+      left: 35px;
       padding-left: 0;
       height: 100vh;
       display: flex;
@@ -111,6 +111,7 @@ body {
     text-decoration: none;
     border-width: 0px;
     pointer-events: auto;
+    text-shadow: 1px 1px black;
   }
   
   nav a:hover, nav button:hover {
@@ -212,7 +213,7 @@ body {
   }
   
   .disc-name {
-    font-size: 12px;
+    font-size: 11px;
     color: #E92200;
   }
   
@@ -232,7 +233,7 @@ body {
   
   .disc {
     margin: 0 47px 20px;
-    width: 38%;
+    width: 35%;
   }
   
   html, body, .root, .container{
@@ -249,15 +250,106 @@ body {
 
   .evento {
     display: flex;
-    flex: 1 1 auto;
+    flex: 0;
     align-items: center;
     flex-direction: row;
     color: #E92200;
     font-size: 20px;
     justify-content: space-around;
     width: 50%;
+    flex: 0 0 auto;
+    margin: 20px;
   }
 
-  #shows {
+  #modal #shows {
     width: 100%;
+    height: 65%;    
+    overflow-y: auto;
   }
+
+  .shows-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 1px;  /* remove scrollbar space */
+    height: 20px;
+    background: black;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.evento p {
+  margin: 3px;
+}
+
+.entradas {
+  background: black;
+  color: #E92200;
+  border: 1px solid #E92200;
+  padding: 9px 14px;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+button.entradas:hover {
+  color: #050483 ;
+  border: 1px solid #050483;
+}
+
+button {
+  cursor: pointer;
+}
+
+#copyrights {
+  position: absolute;
+  bottom: 25px;
+  right: 35px;
+  font-size: 9px;
+  color: #E92200;
+}
+
+#logo img,
+#logo-shows img{
+  height: 90vh;
+}
+
+@media(max-width: 500px) {
+  #logo,
+  #logo-shows,
+  #links,
+  #social-media {
+    display: none;
+  }
+
+  .evento {
+    flex-direction: column;
+    font-size: 15px;
+    margin: 0 0 40px;
+  }
+
+  .evento .entradas {
+    padding: 8px 70px;
+    font-size: 15px;
+  }
+
+  .evento .place {
+    margin: 8px 0px 12px;
+  }
+
+  #modal #shows {
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+    align-self: baseline;
+    margin-top: 10%;
+  }
+}
