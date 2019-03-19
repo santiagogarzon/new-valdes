@@ -59,8 +59,6 @@ body {
       z-index: 99;
       pointer-events: none;
   }
-  .asdasd 
-  {}
   
   #logo.not-shown, #musica.not-shown, #logo-shows.not-shown {
     display: none;
