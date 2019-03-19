@@ -29,9 +29,52 @@ function goToShows() {
     document.getElementById('shows').className = 'show animated slideInUp';
 }
 
-$(document).ready(loadStuff);
+function goToMusicM() {
+    window.scrollTo(0, 0);
+    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('fotos').className = ' animated slideOutUp';
+    document.getElementById('logo-shows').className = 'animated slideOutUp';
+    document.getElementById('shows').className = 'animated slideOutUp';
+    document.getElementById('copyrights').className = ' animated bounceOut';
+    document.getElementById('musica').className = 'show animated slideInDown';
+}
 
-function loadStuff(){
+function goToFotosM() {
+    window.scrollTo(0, 0);
+    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('musica').className = 'animated slideOutUp';
+    document.getElementById('logo-shows').className = 'animated slideOutUp';
+    document.getElementById('shows').className = 'animated slideOutUp';
+    document.getElementById('copyrights').className = ' animated bounceOut';
+    document.getElementById('fotos').className = 'show animated slideInUp';
+}
+
+function goToShowsM() {
+    window.scrollTo(0, 0);
+    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('musica').className = 'animated slideOutUp';
+    document.getElementById('fotos').className = ' animated slideOutUp';    
+    document.getElementById('links-mobile').className = 'not-shown';
+    document.getElementById('copyrights').className = 'not-shown';
+    document.getElementById('logo-shows-mobile').className = 'show animated slideInUp';
+    document.getElementById('shows').className = 'show animated slideInUp';
+    document.getElementById('mobile-close-icon').className = 'animated bounceIn';
+
+}
+
+function goBackToLink() {    
+    console.log('asdasd');
+    window.scrollTo(0, 0);    
+    document.getElementById('links-mobile').className = 'show animated slideInUp';  
+    document.getElementById('copyrights').className = 'animated slideInUp';     
+    document.getElementById('logo-shows-mobile').className = '';
+    document.getElementById('shows').className = '';
+    document.getElementById('mobile-close-icon').className = 'animated bounceOut';
+}
+
+//$(document).ready();
+
+/*function loadStuff(){
     $.ajax({
         type: "POST",
         url: "path/to/ajax.php",
@@ -45,4 +88,4 @@ function loadStuff(){
             $("#divid").load("path/to/template.php"); //div gets filled with template
         }
     });
-}
+}*/
