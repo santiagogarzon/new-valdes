@@ -2,9 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial Regular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust:none;
   }
   
   code {
@@ -13,12 +12,13 @@ body {
   }
   
 .App {
-    text-align: center;
-    
+    text-align: center;    
+    -webkit-overflow-scrolling: touch;
   }
   
   a, body, button, html {
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular';    
+    -webkit-overflow-scrolling: touch;
   }
   
   .App-logo {
