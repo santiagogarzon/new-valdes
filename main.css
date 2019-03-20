@@ -339,9 +339,6 @@ button {
 }
 
 @media(max-width: 500px) {
-  .show-container {
-    height: 80%;
-  }
   #music-logo {
     left: auto;
     width: 100%
@@ -420,7 +417,6 @@ button {
     position: absolute;
     bottom: 0;
     background-color: black;
-    z-index: 99;
   }
 
   #logo-shows-mobile.show,
