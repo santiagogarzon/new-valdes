@@ -12,7 +12,7 @@ body {
   }
   
   a, body, button, html {
-    font-family: 'Arial Regular';    
+    font-family: Arial,Helvetica,sans-serif; 
     -webkit-overflow-scrolling: touch;
   }
   
