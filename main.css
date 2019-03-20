@@ -1,11 +1,24 @@
+html,
 body {
     margin: 0;
     padding: 0;
     font-family: Arial,Helvetica,sans-serif; 
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust:none;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
 }
   
+.scroll {
+  overflow: auto;
+  height: 100%;
+ }
+
+ .scroll-music {
+   overflow: auto;
+ }
+
 .App {
     text-align: center;    
     -webkit-overflow-scrolling: touch;
