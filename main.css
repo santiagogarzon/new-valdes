@@ -8,6 +8,7 @@ body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    background: black;
 }
   
 .scroll {
@@ -151,10 +152,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
     opacity: 0;
   }
   
   #modal.open {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    opacity: 1;
   }
   
   #modal #fotos {
