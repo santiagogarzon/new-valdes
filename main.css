@@ -151,6 +151,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
     opacity: 0;
@@ -273,7 +274,7 @@ body {
   #modal #shows {
     width: 100%;
     height: 65%;    
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   .shows-container {
