@@ -404,7 +404,7 @@ button {
 
   #modal #shows {
     width: 100%;
-    height: 100%;
+    height: 60%;
     overflow-y: auto;
     align-self: baseline;
     margin-top: 15%;
@@ -415,8 +415,7 @@ button {
     display: none;
     width: 100%;
     position: absolute;
-    bottom: 0;
-    background-color: black;
+    bottom: 1%;
   }
 
   #logo-shows-mobile.show,
