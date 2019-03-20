@@ -39,6 +39,7 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    -webkit-overflow-scrolling: touch;
   }
   
   #logo,
@@ -159,6 +160,7 @@ body {
   #modal #musica, #modal #fotos, #modal #tour, #modal #videos, #modal #shows {
     display: none;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
   }
   
   #modal #fotos.show {
@@ -393,6 +395,7 @@ button {
     overflow-y: auto;
     align-self: baseline;
     margin-top: 15%;
+    -webkit-overflow-scrolling: touch;
   }
 
   #logo-shows-mobile {
@@ -463,6 +466,7 @@ button {
   #logo-home-mobile.show,
   #mobile-close-icon.show,
   #musica.show {
-    display: block;
+    display: block;    
+    -webkit-overflow-scrolling: touch;
   }
 }
