@@ -5,7 +5,7 @@ body {
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust:none;
   }
-  
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
@@ -13,14 +13,37 @@ body {
   
 .App {
     text-align: center;    
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: none;
   }
   
-  a, body, button, html {
+  a, body, button, html, .text-container {
     font-family: 'Arial Regular';    
     -webkit-overflow-scrolling: touch;
   }
   
+  .text-container {
+    z-index: 99999;
+    width: 40%;
+    height: 70%;
+    color: black;
+    font-size: 18px;
+    background: #E92200;
+    position: absolute;
+    text-align: justify;
+    line-height: 24px;
+    margin-top: 9%;
+    overflow-y: scroll
+  }
+
+  .text-container p {
+    margin: 0;
+  }
+
+  .text-container::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
     height: 80vmin;
@@ -63,15 +86,27 @@ body {
   #logo.not-shown, #musica.not-shown, #logo-shows.not-shown {
     display: none;
   }
-  
-  #social-media {
+
+  #social-media.show,
+  #social-media-nosotros.show {
+    display: block !important;
+  }
+
+  #social-media.not-show,
+  #social-media-nosotros.not-show {
+    display: none !important;
+  }
+
+  #social-media,
+  #social-media-nosotros {
     position: fixed;
     top: 25px;
     right: 25px;
     z-index: 999;
   }
   
-  #social-media a {
+  #social-media a,
+  #social-media-nosotros a {
     margin: 0 5px;
     cursor: pointer!important;
   }
@@ -171,6 +206,7 @@ body {
     justify-content: flex-start;
   }
   
+
   #modal #fotos.show, #modal #shows.show, #modal #videos.show, #modal #nosotros.show {
     display: flex;
     flex-direction: column;
@@ -189,9 +225,43 @@ body {
     height: auto;
   }
   
-  #musica {
+  #nosotros {
+    background-color: #E92200;
+    display: none;
+  }
+
+  #nosotros.show {
+    display: block;
+  }
+
+  .image-nosotros {
+    height: 100%;
+  }
+
+  #musica, #nosotros {
     width: 100%;
     height: 100%;
+  }
+
+  .links-negros button{
+    color: black;
+  }
+
+  .links-negros nav a:hover, nav button:hover {
+    cursor: pointer!important;
+    color: #1602C8;
+  }
+  
+  .links-negros nav a.selected, nav button.selected {
+    color: #1602C8;
+  }
+
+  img.shown {
+    display: block;
+  }
+
+  img.not-shown {
+    display: none;
   }
   
   #music-logo {
@@ -348,21 +418,25 @@ button {
     width: 35%;
   }
 
-  #social-media {
+  #social-media,
+  #social-media-nosotros {
     right: auto;
     top: 5%;
     display: inline;
   }
 
-  #social-media a{
+  #social-media a,
+  #social-media-nosotros a{
     margin: 0;
   }
 
-  #social-media a img {
+  #social-media a img ,
+  #social-media-nosotros a img {
     width: 10%;
   }
 
-  #social-media #youtube img{
+  #social-media #youtube img,
+  #social-media-nosotros #youtube img {
     width: 25%;
   }
 
@@ -409,8 +483,14 @@ button {
 
   #logo-shows-mobile.show,
   #links-mobile.show,
-  #social-media.show {
-    display: block;
+  #social-media.show,
+  #social-media-nosotros.show {
+    display: block !important;
+  }
+
+  #social-media.not-show,
+  #social-media-nosotros.not-show {
+    display: none !important;
   }
 
   #logo-shows-mobile img {
@@ -455,12 +535,14 @@ button {
   #logo-shows,
   #links,
   #social-media,
+  #social-media-nosotros,
   #links,
   #links-mobile.not-shown,
   #copyrights.not-shown,
   #mobile-close-icon,
   #logo-home-mobile,
-  #musica {
+  #musica,
+  #nosotros.not-shown {
     display: none;
   }
 
