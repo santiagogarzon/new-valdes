@@ -1,24 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+    font-family: Arial,Helvetica,sans-serif; 
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust:none;
   }
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  
 .App {
     text-align: center;    
     -webkit-overflow-scrolling: none;
   }
   
   a, body, button, html, .text-container {
-    font-family: 'Arial Regular';    
-    -webkit-overflow-scrolling: touch;
+    font-family: Arial,Helvetica,sans-serif;
   }
   
   .text-container {
@@ -50,10 +44,6 @@ body {
     pointer-events: none;
   }
   
-  .App-header {
-  
-  }
-  
   .App-link {
     color: #61dafb;
   }
@@ -67,6 +57,7 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    -webkit-overflow-scrolling: touch;
   }
   
   #logo,
@@ -99,7 +90,7 @@ body {
 
   #social-media,
   #social-media-nosotros {
-    position: fixed;
+    position: absolute;
     top: 25px;
     right: 25px;
     z-index: 999;
@@ -111,8 +102,6 @@ body {
     cursor: pointer!important;
   }
   
-  #links {
-  }
   
   nav {
     position: fixed;
@@ -176,29 +165,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    -webkit-transform: translateY(-100vh);
-    transform: translateY(-100vh);
-    opacity: 0;
   }
   
   #modal.open {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-    -webkit-transition: all 1.5s ease-in-out;
-    transition: all 1.5s ease-in-out;
-    opacity: 1;
   }
   
   #modal #fotos {
     width: 100%;
     margin: 0 auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
   
   #modal #musica, #modal #fotos, #modal #tour, #modal #videos, #modal #shows {
     display: none;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
   }
   
   #modal #fotos.show {
@@ -240,7 +222,8 @@ body {
 
   #musica, #nosotros {
     width: 100%;
-    height: 100%;
+    height: 100%;    
+    overflow: auto;
   }
 
   .links-negros button{
@@ -472,6 +455,7 @@ button {
     overflow-y: auto;
     align-self: baseline;
     margin-top: 15%;
+    -webkit-overflow-scrolling: touch;
   }
 
   #logo-shows-mobile {
@@ -550,6 +534,7 @@ button {
   #logo-home-mobile.show,
   #mobile-close-icon.show,
   #musica.show {
-    display: block;
+    display: block;    
+    -webkit-overflow-scrolling: touch;
   }
 }
