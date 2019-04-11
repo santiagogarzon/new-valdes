@@ -214,6 +214,43 @@ function onYouTubeIframeAPIReady() {
     })
 }
 
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://valdeseventos-2a73.restdb.io/rest/eventos",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": "5cae9d1b1929401ffedd1379",
+      "cache-control": "no-cache"
+    }
+}
+                  
+$.ajax(settings).done(function (response) {
+        // Begin accessing JSON data here
+    var data = response;
+    data.forEach(evento => {
+        /*const card = document.createElement('div');
+        card.setAttribute('class', 'card');
+
+        const h1 = document.createElement('h1');
+        h1.textContent = evento.lugar;
+
+        const p = document.createElement('p');
+        evento.description = evento.ciudad;
+        p.textContent = `${evento.description}...`;
+
+        container.appendChild(card);
+        card.appendChild(h1);
+        card.appendChild(p);*/
+    });
+    console.log(response);
+});
+
+
+
+
+
 //$(document).ready();
 
 /*function loadStuff(){
