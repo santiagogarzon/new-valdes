@@ -1,3 +1,4 @@
+screen.orientation.lock("portrait-primary");
 
 function goToMusic() {
     window.scrollTo(0, 0);
@@ -131,13 +132,31 @@ function goToVideosM() {
     document.getElementById('fotos').className = ' animated slideOutUp';    
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
-    document.getElementById('logo-shows-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-shows-mobile').className = '';
     document.getElementById('logo-videos-mobile').className = 'show animated slideInUp';
-    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-home-mobile').className = '';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('shows').className = ' animated slideOutUp';
     document.getElementById('videos').className = 'show animated slideInUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
+}
+
+function goToNosotrosM() {
+    window.scrollTo(0, 0);
+    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('musica').className = 'animated slideOutUp';
+    document.getElementById('fotos').className = ' animated slideOutUp';    
+    document.getElementById('links-mobile').className = 'not-shown';
+    document.getElementById('copyrights').className = 'not-shown';
+    document.getElementById('logo-shows-mobile').className = '';
+    document.getElementById('logo-videos-mobile').className = '';
+    document.getElementById('logo-nosotros-mobile').className = 'show animated slideInUp';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('social-media').className = 'animated slideOutUp';
+    document.getElementById('shows').className = ' animated slideOutUp';
+    document.getElementById('videos').className = 'animated slideOutUp';
+    document.getElementById('nosotros-mobile').className = 'show animated slideInUp';
+    document.getElementById('mobile-close-icon').className = 'show animated bounceIn black';
 }
 
 function goBackToLink() {
@@ -145,7 +164,9 @@ function goBackToLink() {
         numOfSlides = slides.length;   
     
     for (let index = 0; index < numOfSlides; index++) {
-        slides[index].video.stopVideo();        
+        if(slides[0].video.stopVideo !== null){
+            slides[index].video.stopVideo();
+        }     
     }
     
     window.scrollTo(0, 0);    
@@ -153,8 +174,10 @@ function goBackToLink() {
     document.getElementById('copyrights').className = 'animated slideInUp';     
     document.getElementById('logo-shows-mobile').className = '';
     document.getElementById('logo-videos-mobile').className = '';
+    document.getElementById('logo-nosotros-mobile').className = '';
     document.getElementById('shows').className = '';    
     document.getElementById('fotos').className = 'animated slideOutUp';  
+    document.getElementById('nosotros-mobile').className = 'not-shown animated slideOutDown';
     document.getElementById('social-media').className = 'show animated slideInDown';
     document.getElementById('logo-home-mobile').className = 'show animated slideInDown';
     document.getElementById('musica').className = 'animated slideOutUp';

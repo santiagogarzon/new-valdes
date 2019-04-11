@@ -1,3 +1,15 @@
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -46,6 +58,10 @@ body {
   
   .App-link {
     color: #61dafb;
+  }
+
+  #nosotros-mobile.not-shown {
+    display: none;
   }
   
   #container {
@@ -462,7 +478,7 @@ button {
   right: 0;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 767px) {
   #music-logo {
     left: auto;
     width: 100%
@@ -544,6 +560,17 @@ button {
     margin-bottom: 20%;
   }
 
+  #modal #nosotros-mobile {
+    width: 100%;
+    height: 100%;
+    background-color: #E92200;
+  }
+
+  .image-nosotros-mobile {
+    width: 100%;
+    margin-top: 10%;
+  }
+
   .video-label {
     position: absolute;
     top: -3%;
@@ -562,7 +589,8 @@ button {
   }
 
   #logo-shows-mobile,
-  #logo-videos-mobile {
+  #logo-videos-mobile,
+  #logo-nosotros-mobile {
     display: none;
     width: 100%;
     position: absolute;
@@ -571,10 +599,26 @@ button {
 
   #logo-shows-mobile.show,
   #logo-videos-mobile.show,
+  #logo-nosotros-mobile.show,
   #links-mobile.show,
   #social-media.show,
   #social-media-nosotros.show {
     display: block !important;
+  }
+
+  #logo-nosotros-mobile {
+    z-index: 99;
+  }
+
+  .text-container {
+    width: 80%;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 53%;
+    position: fixed;
+    height: 50%;
+    margin-left: 10%;
+    top: 0;
   }
 
   #social-media.not-show,
@@ -583,7 +627,8 @@ button {
   }
 
   #logo-shows-mobile img,
-  #logo-videos-mobile img {
+  #logo-videos-mobile img,
+  #logo-nosotros-mobile img {
     width: 85%;
   }
 
@@ -597,6 +642,10 @@ button {
     background: transparent;
     border: none;
     z-index: 100;
+  }
+
+  #mobile-close-icon.black{
+    color: black;
   }
 
   #copyrights {
@@ -632,14 +681,16 @@ button {
   #mobile-close-icon,
   #logo-home-mobile,
   #musica,
-  #nosotros.not-shown {
+  #nosotros.not-shown,
+  #nosotros-mobile.not-shown {
     display: none;
   }
 
   #links-mobile,
   #logo-home-mobile.show,
   #mobile-close-icon.show,
-  #musica.show {
+  #musica.show,
+  #nosotros.show {
     display: block;    
     -webkit-overflow-scrolling: touch;
   }
