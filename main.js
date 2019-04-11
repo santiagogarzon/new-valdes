@@ -124,17 +124,42 @@ function goToShowsM() {
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
 }
 
-function goBackToLink() {    
+function goToVideosM() {
+    window.scrollTo(0, 0);
+    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('musica').className = 'animated slideOutUp';
+    document.getElementById('fotos').className = ' animated slideOutUp';    
+    document.getElementById('links-mobile').className = 'not-shown';
+    document.getElementById('copyrights').className = 'not-shown';
+    document.getElementById('logo-shows-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-videos-mobile').className = 'show animated slideInUp';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('social-media').className = 'animated slideOutUp';
+    document.getElementById('shows').className = ' animated slideOutUp';
+    document.getElementById('videos').className = 'show animated slideInUp';
+    document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
+}
+
+function goBackToLink() {
+    var slides = $('.slide'),
+        numOfSlides = slides.length;   
+    
+    for (let index = 0; index < numOfSlides; index++) {
+        slides[index].video.stopVideo();        
+    }
+    
     window.scrollTo(0, 0);    
     document.getElementById('links-mobile').className = 'show animated slideInUp';  
     document.getElementById('copyrights').className = 'animated slideInUp';     
     document.getElementById('logo-shows-mobile').className = '';
+    document.getElementById('logo-videos-mobile').className = '';
     document.getElementById('shows').className = '';    
     document.getElementById('fotos').className = 'animated slideOutUp';  
     document.getElementById('social-media').className = 'show animated slideInDown';
     document.getElementById('logo-home-mobile').className = 'show animated slideInDown';
     document.getElementById('musica').className = 'animated slideOutUp';
-    document.getElementById('mobile-close-icon').className = 'animated bounceOut';
+    document.getElementById('mobile-close-icon').className = 'animated bounceOut';    
+    document.getElementById('videos').className = 'animated slideOutUp';
 }
 
 $(document).ready(function () {
