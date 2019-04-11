@@ -4,13 +4,13 @@ function goToMusic() {
     window.scrollTo(0, 0);
     document.getElementById('social-media').className = 'show';
     document.getElementById('social-media-nosotros').className = 'not-show';   
-    document.getElementById('nosotrosLogo').className = 'animated slideOutUp';
-    document.getElementById('normalLogo').className = 'animated slideInUp';
+    document.getElementById('nosotrosLogo').className = 'not-shown';
+    document.getElementById('normalLogo').className = 'not-shown';
     document.getElementById('links').className = 'desktop';
     document.getElementById('musica').className = 'show animated slideInUp';
-    document.getElementById('logo').className = 'animated slideOutUp';
+    document.getElementById('logo').className = 'not-shown';
     document.getElementById('fotos').className = ' animated slideOutUp';
-    document.getElementById('logo-shows').className = 'animated slideOutUp';
+    document.getElementById('logo-shows').className = 'not-shown';
     document.getElementById('shows').className = 'animated slideOutUp';
     document.getElementById('copyrights').className = ' animated bounceOut';
     document.getElementById('nosotros').className = 'animated slideOutUp';
