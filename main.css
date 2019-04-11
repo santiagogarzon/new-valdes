@@ -10,6 +10,10 @@
   }
 }
 
+a {
+  color: transparent;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -374,9 +378,18 @@ body {
   letter-spacing: 1px;
 }
 
+.entradas a {
+  color: #E92200;
+  text-decoration: none;
+}
+
 button.entradas:hover {
   color: #050483 ;
   border: 1px solid #050483;
+}
+
+.entradas a:hover {
+  color: #050483;
 }
 
 button {
@@ -400,7 +413,8 @@ button {
 #logo-shows-mobile,
 #links-mobile,
 #logo-home-mobile,
-#logo-videos-mobile {
+#logo-videos-mobile,
+#logo-nosotros-mobile {
   display: none;
 }
 
@@ -476,6 +490,20 @@ button {
 .slide-arrow.right{
   left: auto;
   right: 0;
+}
+
+@media(min-width: 768px) {
+  .details {
+    width: 45%;
+  }
+
+  .place {
+    width: 15%;
+  }
+
+  .evento .button {
+    width: 40%;
+  }
 }
 
 @media(max-width: 767px) {

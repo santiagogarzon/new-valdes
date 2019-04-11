@@ -225,24 +225,54 @@ var settings = {
       "cache-control": "no-cache"
     }
 }
-                  
+          
 $.ajax(settings).done(function (response) {
         // Begin accessing JSON data here
     var data = response;
     data.forEach(evento => {
-        /*const card = document.createElement('div');
-        card.setAttribute('class', 'card');
+        const eventoDiv = document.createElement('div');
+        eventoDiv.setAttribute('class', 'evento');
 
-        const h1 = document.createElement('h1');
-        h1.textContent = evento.lugar;
+        const eventoDetail = document.createElement('div');
+        eventoDetail.setAttribute('class', 'details');
 
         const p = document.createElement('p');
-        evento.description = evento.ciudad;
-        p.textContent = `${evento.description}...`;
+        p.setAttribute('class', 'fecha');
+        p.setAttribute('style', 'font-weight: 700;');
+        p.textContent = evento.Fecha;
 
-        container.appendChild(card);
-        card.appendChild(h1);
-        card.appendChild(p);*/
+        const p1 = document.createElement('p');
+        p1.textContent = evento.Lugar;
+        
+        const p2 = document.createElement('p');
+        p2.textContent = evento.Ciudad;
+
+        const eventoPlace = document.createElement('div');
+        eventoPlace.setAttribute('class', 'place');
+
+        const p3 = document.createElement('p');
+        p3.textContent = evento.Pais;
+
+        
+        const eventoButton = document.createElement('div');
+        eventoButton.setAttribute('class', 'button');
+        const button = document.createElement('button');
+        button.setAttribute('class', 'entradas');
+        const link = document.createElement('a');
+        link.setAttribute('href', evento.Link);
+        link.setAttribute('target', '_blank');
+        button.textContent = 'ENTRADAS';
+        
+        document.getElementById('event-container').appendChild(eventoDiv);
+        eventoDiv.appendChild(eventoDetail);
+        eventoDetail.appendChild(p);
+        eventoDetail.appendChild(p1);
+        eventoDetail.appendChild(p2);
+        eventoDiv.appendChild(eventoPlace);
+        eventoPlace.appendChild(p3);
+        eventoDiv.appendChild(eventoButton);
+        eventoButton.appendChild(link);
+        link.appendChild(button);
     });
     console.log(response);
 });
