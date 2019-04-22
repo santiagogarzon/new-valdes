@@ -15,6 +15,7 @@ function goToHome() {
     document.getElementById('copyrights').className = ' ';
     document.getElementById('nosotros').className = 'animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
+    document.body.className =  '';
 
 }
 
@@ -33,6 +34,7 @@ function goToMusic() {
     document.getElementById('copyrights').className = ' ';
     document.getElementById('nosotros').className = 'animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
+    document.body.className =  '';
 }
 
 function goToVideos() {
@@ -50,6 +52,7 @@ function goToVideos() {
   document.getElementById('copyrights').className = ' ';
   document.getElementById('nosotros').className = 'animated slideOutUp';
   document.getElementById('musica').className = 'animated slideOutUp';
+  document.body.className =  '';
 }
 
 function goToFotos() {
@@ -67,6 +70,7 @@ function goToFotos() {
     document.getElementById('fotos').className = 'show animated slideInUp';
     document.getElementById('nosotros').className = 'animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
+    document.body.className =  '';
 }
 
 function goToShows() {
@@ -84,6 +88,7 @@ function goToShows() {
     document.getElementById('shows').className = 'show animated slideInUp';
     document.getElementById('nosotros').className = 'animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
+    document.body.className =  '';
 }
 
 function goToNosotros() {
@@ -101,6 +106,7 @@ function goToNosotros() {
   document.getElementById('logo-shows').className = 'animated slideOutUp';
   document.getElementById('nosotros').className = 'show animated slideInUp';
   document.getElementById('videos').className = 'animated slideOutUp';
+  document.body.className = 'nosotros';
 }
 
 function goToMusicM() {
