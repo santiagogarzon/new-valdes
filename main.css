@@ -22,6 +22,10 @@ body {
     background-color: black;
   }
 
+body.nosotros {
+  background-color: #E92200;
+}
+
 .App {
     text-align: center;    
     -webkit-overflow-scrolling: none;
@@ -672,7 +676,7 @@ button {
     line-height: 16px;
     margin-top: 44%;
     position: fixed;
-    height: 57%;
+    height: 52%;
     margin-left: 14%;
     top: 0;
   }
@@ -803,3 +807,4 @@ canvas {
   background: #77f;
   opacity: 0.5;
 }
+
