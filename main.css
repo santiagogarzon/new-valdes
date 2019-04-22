@@ -17,9 +17,9 @@ a {
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial,Helvetica,sans-serif; 
-    -webkit-overflow-scrolling: touch;
+    font-family: Arial,Helvetica,sans-serif;
     -webkit-text-size-adjust:none;
+    background-color: black;
   }
 
 .App {
@@ -77,7 +77,6 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    -webkit-overflow-scrolling: touch;
   }
   
   #logo,
@@ -118,7 +117,7 @@ body {
   
   #social-media a,
   #social-media-nosotros a {
-    margin: 0 5px;
+    margin: 0;
     cursor: pointer!important;
   }
   
@@ -144,17 +143,16 @@ body {
     color: #E92200;
     margin: 8px;
     padding: 0;
-    font-size: 23pt;
+    font-size: 22pt;
     font-weight: 300;
     width: 208px;
     text-align: right;
-    line-height: 24px;
+    line-height: 19px;
     text-transform: uppercase;
     letter-spacing: 0px;
     text-decoration: none;
     border-width: 0px;
     pointer-events: auto;
-    text-shadow: 1px 1px black;
   }
   
   nav a:hover, nav button:hover {
@@ -200,7 +198,6 @@ body {
   #modal #musica, #modal #fotos, #modal #tour, #modal #videos, #modal #shows {
     display: none;
     height: 100%;
-    -webkit-overflow-scrolling: touch;
   }
   
   #modal #fotos.show {
@@ -242,18 +239,35 @@ body {
     display: block;
   }
 
-  .image-nosotros {
-    height: 100%;
+  #mobile-close-icon.show.nosotros {
+    background-color: #E92200;
   }
 
-  #musica, #nosotros {
+  .image-nosotros {
+    width: 100%;
+  }
+
+  #musica {
     width: 100%;
     height: 100%;    
     overflow: auto;
   }
 
+  #nosotros {
+    width: 100%;
+    height: 100%;    
+    overflow: hidden;
+  }
+
   .links-negros button{
     color: black;
+    margin: 0;
+    padding: 8px;
+    background-color: #E92200;
+  }
+
+  #social-media-nosotros {
+    background-color: #E92200;
   }
 
   .links-negros nav a:hover, nav button:hover {
@@ -319,7 +333,20 @@ body {
   }
   
   .music-big-container {
-    background-color: black;
+    /*background-color: black;*/
+  }
+
+  #music-logo img {
+    width: 175px;
+    height: 45px;
+  }
+
+  .disc-links img {
+    width: 20px;
+  }
+
+  #youtubeLink img {
+    width: 25px;
   }
   
   .disc-picture img {
@@ -402,6 +429,7 @@ button {
   right: 35px;
   font-size: 9px;
   color: #E92200;
+  z-index: 99999;
 }
 
 #logo img,
@@ -524,6 +552,7 @@ button {
 
   #music-logo img {
     width: 35%;
+    height: 30%;
   }
 
   #social-media,
@@ -561,7 +590,7 @@ button {
 
   .evento {
     flex-direction: column;
-    font-size: 11px;
+    font-size: 13px;
     margin: 0 0 40px;
   }
 
@@ -576,11 +605,10 @@ button {
 
   #modal #shows {
     width: 100%;
-    height: 60%;
+    height: 70%;
     overflow-y: auto;
     align-self: baseline;
-    margin-top: 15%;
-    -webkit-overflow-scrolling: touch;
+    margin-top: 10%;
   }
 
   #modal #videos {
@@ -596,7 +624,6 @@ button {
 
   .image-nosotros-mobile {
     width: 100%;
-    margin-top: 10%;
   }
 
   .video-label {
@@ -621,7 +648,7 @@ button {
   #logo-nosotros-mobile {
     display: none;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 1%;
   }
 
@@ -632,6 +659,7 @@ button {
   #social-media.show,
   #social-media-nosotros.show {
     display: block !important;
+    z-index: 9999;
   }
 
   #logo-nosotros-mobile {
@@ -639,13 +667,13 @@ button {
   }
 
   .text-container {
-    width: 80%;
+    width: 72%;
     font-size: 12px;
     line-height: 16px;
-    margin-top: 50%;
+    margin-top: 44%;
     position: fixed;
-    height: 50%;
-    margin-left: 10%;
+    height: 57%;
+    margin-left: 14%;
     top: 0;
   }
 
@@ -725,4 +753,53 @@ button {
 
   
 
+}
+
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.aim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 50;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.aim .c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  background: #000;
+  margin: -5px 0 0 -5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 1px solid #77f;
+}
+.aim .h {
+  position: absolute;
+  top: 1px;
+  left: -50%;
+  width: 200%;
+  height: 1px;
+  background: #77f;
+  opacity: 0.5;
+}
+.aim .v {
+  position: absolute;
+  top: -50%;
+  left: 1px;
+  width: 1px;
+  height: 200%;
+  background: #77f;
+  opacity: 0.5;
 }

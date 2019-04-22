@@ -4,8 +4,9 @@
         <head>
             <meta charset="utf-8" />
             <meta 
-            name='viewport' 
-            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+              name='viewport' 
+              content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+            />
             <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
             <link rel="stylesheet" type="text/css" href="animate.css" media="screen" />
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,41 +14,38 @@
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="https://www.youtube.com/iframe_api"></script>
 
-
-
             <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
             <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">            
             <script src="owlcarousel/owl.carousel.min.js"></script>
-
-
 
             <title>Valdes</title>
         </head>
     <header></header>
     <body>
             <div class="App">
-                    <div id="container">                 
-                      <div id="logo">
+                    <div id="container">  
+                        <canvas id="sparks"></canvas>               
+                      <div onclick="goToHome()" id="logo">
                         <img src="img/elements_home_desktop-01.png" alt="valdes" id='normalLogo' class="shown"></img>                        
-                        <img src="img/elementos_nosotrxs_desktop-06.png" alt="valdes" id='nosotrosLogo' class="not-shown"></img>
+                          <img src="img/elementos_nosotrxs_desktop-06.png" alt="valdes" id='nosotrosLogo' class="not-shown"></img>
                       </div>
-                      <div id="logo-home-mobile" class="show">
-                        <img src="img/logo-mobile-home.png"></img>
+                      <div onclick="goBackToLink()" id="logo-home-mobile" class="show">
+                            <img src="img/logo-mobile-home.png"></img>
                       </div>
-                      <div id="logo-shows" class="not-shown">
-                        <img src="img/logo-shows.png" alt="valdes"></img>
+                      <div onclick="goToHome()" id="logo-shows" class="not-shown">
+                            <img src="img/logo-shows.png" alt="valdes"></img>
                       </div>
                       <div id="copyrights">
                           <p>® VALDESHERMANOS</p>
                       </div>
-                      <div id="logo-shows-mobile">
-                        <img src="img/logo-music-mobile.png"/>
+                      <div onclick="goBackToLink()" id="logo-shows-mobile">
+                          <img src="img/logo-music-mobile.png"/>
                       </div>
-                      <div id="logo-videos-mobile">
-                        <img src="img/elements_videos_mobile-01.png"/>
+                      <div onclick="goBackToLink()"  id="logo-videos-mobile">                        
+                          <img src="img/elements_videos_mobile-01.png"/>                        
                       </div>
-                      <div id="logo-nosotros-mobile">
-                        <img src="img/elementos_nosotrxs_mobile-03.png"/>
+                      <div onclick="goBackToLink()"  id="logo-nosotros-mobile">
+                          <img src="img/elementos_nosotrxs_mobile-03.png"/>
                       </div>
                       <button id="mobile-close-icon" onclick="goBackToLink()" >X</button>
                       <nav id="links" class="desktop">
@@ -135,7 +133,7 @@
                           </div>
                         </div>
                         <div id="nosotros-mobile" class="not-shown">
-                            <img src="img/elementos_nosotrxs_mobile-01.png" class="image-nosotros-mobile"> </img>
+                            <img src="img/elementos_nosotrxs_caracortada.png" class="image-nosotros-mobile"> </img>
                             <div class="text-container">
                               <p>Valdes es un dúo de pop/house originado en Córdoba y formado por los
                               hermanos Edu y Pancho Valdés. Luego de un activo recorrido por separado
@@ -186,7 +184,9 @@
                         <div id="musica" class="">
                           <div class="music-big-container">
                             <div id="music-logo" class="shown">
-                              <img src="img/logo-music.png" alt="valdes"></img>
+                              <a href="index.html">
+                                  <img src="img/elements_musica_desktop-05.png" alt="valdes"></img>
+                              </a>
                             </div>
                             <div class="music-container">
                               <div id="grisDisc" class="disc">
@@ -199,13 +199,13 @@
                                   </div>
                                   <div class="disc-links">
                                     <a id="spotifyLink" href="https://open.spotify.com/album/4H8NvcmZzGN9SvpOsvjKG3" target="_blank">
-                                      <img src="img/spotify-music.png"></img>
+                                      <img src="img/elements_musica_desktop-06.png"></img>
                                     </a>
                                     <a id="itunesLink" href="https://itunes.apple.com/mx/album/gris/1380496054" target="_blank">
-                                      <img src="img/itunes-music.png"></img>
+                                      <img src="img/elements_musica_desktop-07.png"></img>
                                     </a>
                                     <a id="youtubeLink" href="https://www.youtube.com/watch?v=jZZDhMGIRJ8" target="_blank">
-                                      <img src="img/youtube-music.png"></img>
+                                      <img src="img/elements_musica_desktop-08.png"></img>
                                     </a>
                                   </div>
                                 </div>
@@ -220,13 +220,13 @@
                                   </div>
                                   <div class="disc-links">
                                     <a id="spotifyLink" href="https://open.spotify.com/album/7H5ov6St2cFqi4waHdKWY2" target="_blank">
-                                      <img src="img/spotify-music.png"></img>
+                                      <img src="img/elements_musica_desktop-06.png"></img>
                                     </a>
                                     <a id="itunesLink" href="https://itunes.apple.com/mx/album/valdes/1093443870" target="_blank">
-                                      <img src="img/itunes-music.png"></img>
+                                      <img src="img/elements_musica_desktop-07.png"></img>
                                     </a>
                                     <a id="youtubeLink" href="https://www.youtube.com/watch?v=7DacuEV-m-M" target="_blank">
-                                      <img src="img/youtube-music.png"></img>
+                                      <img src="img/elements_musica_desktop-08.png"></img>
                                     </a>
                                   </div>
                                 </div>
@@ -241,13 +241,13 @@
                                   </div>
                                   <div class="disc-links">
                                     <a id="spotifyLink" href="https://open.spotify.com/album/0DcPCMgqwXmnDBU4EpeIZM" target="_blank">
-                                      <img src="img/spotify-music.png"></img>
+                                      <img src="img/elements_musica_desktop-06.png"></img>
                                     </a>
                                     <a id="itunesLink" href="https://itunes.apple.com/mx/album/callar-single/1355581297" target="_blank">
-                                      <img src="img/itunes-music.png"></img>
+                                      <img src="img/elements_musica_desktop-07.png"></img>
                                     </a>
                                     <a id="youtubeLink" href="https://www.youtube.com/watch?v=Ahqg0wo0arE" target="_blank">
-                                      <img src="img/youtube-music.png"></img>
+                                      <img src="img/elements_musica_desktop-08.png"></img>
                                     </a>
                                   </div>
                                 </div>
@@ -257,11 +257,16 @@
                         </div>
                         <div id="fotos" class="">
                           <div>
-                            <img src="img/foto1.jpg"></img>
-                            <img src="img/foto2.jpg"></img>
-                            <img src="img/foto3.jpg"></img>
-                            <img src="img/foto4.jpg"></img>
-                            <img src="img/foto5.jpg"></img>
+                            <img src="img/1.jpg"></img>
+                            <img src="img/2.jpg"></img>
+                            <img src="img/3.jpg"></img>
+                            <img src="img/4.jpg"></img>
+                            <img src="img/5a.jpg"></img>
+                            <img src="img/6.jpg"></img>
+                            <img src="img/7.jpg"></img>
+                            <img src="img/8.jpg"></img>
+                            <img src="img/9.jpg"></img>
+                            <img src="img/10.jpg"></img>
                           </div>
                         </div>
                       </section>
