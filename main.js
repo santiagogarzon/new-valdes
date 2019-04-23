@@ -112,7 +112,7 @@ function goToMusicM() {
     document.getElementById('logo').className = 'animated slideOutUp';
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
-    document.getElementById('logo-shows-mobile').className = 'show animated slideOutUp';
+    document.getElementById('logo-shows-mobile').className = 'show animated slideOutDown';
     document.getElementById('logo-home-mobile').className = 'animated slideOutUp';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
@@ -260,10 +260,26 @@ var settings = {
       "cache-control": "no-cache"
     }
 }
+
+String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+} 
           
 $.ajax(settings).done(function (response) {
         // Begin accessing JSON data here
     var data = response;
+    data.sort(function(a,b){
+      aux1 = a.Fecha.replaceAll("-", "/");
+      aux2 = b.Fecha.replaceAll("-", "/");    
+
+      aux1 = aux1.substr(3, 2)+"/"+aux1.substr(0, 2)+"/"+aux1.substr(6, 4);
+      aux2 = aux2.substr(3, 2)+"/"+aux2.substr(0, 2)+"/"+aux2.substr(6, 4);
+
+      a = new Date(aux1);
+      b = new Date(aux2);
+      return a<b ? -1 : a>b ? 1 : 0;
+    });
     data.forEach(evento => {
         const eventoDiv = document.createElement('div');
         eventoDiv.setAttribute('class', 'evento');
