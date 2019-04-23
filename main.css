@@ -85,7 +85,7 @@ body.nosotros {
   #logo,
   #logo-shows {
       position: fixed;
-      left: 35px;
+      left: 30px;
       padding-left: 0;
       height: 100vh;
       display: flex;
@@ -113,15 +113,18 @@ body.nosotros {
   #social-media,
   #social-media-nosotros {
     position: absolute;
-    top: 25px;
+    top: 33px;
     right: 25px;
     z-index: 999;
+    height: 29px;
   }
   
   #social-media a,
   #social-media-nosotros a {
     margin: 0;
     cursor: pointer!important;
+    position: relative;
+    top: -8px;
   }
   
   
@@ -435,6 +438,10 @@ button {
   z-index: 99999;
 }
 
+#copyrights.black {
+  color: black;
+}
+
 #logo img,
 #logo-shows img{
   height: 90vh;
@@ -525,7 +532,8 @@ button {
 
 @media(min-width: 768px) {
   .details {
-    width: 45%;
+    width: 30%;
+    text-align: justify;
   }
 
   .place {
@@ -533,7 +541,7 @@ button {
   }
 
   .evento .button {
-    width: 40%;
+    width: 35%;
   }
 }
 

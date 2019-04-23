@@ -1,5 +1,3 @@
-screen.orientation.lock("portrait-primary");
-
 function goToHome() {
     window.scrollTo(0, 0);
     document.getElementById('social-media').className = 'show';
@@ -102,7 +100,7 @@ function goToNosotros() {
   document.getElementById('musica').className = 'animated slideOutUp';
   document.getElementById('fotos').className = ' animated slideOutUp';
   document.getElementById('shows').className = 'animated slideOutUp';
-  document.getElementById('copyrights').className = ' ';
+  document.getElementById('copyrights').className = 'black';
   document.getElementById('logo-shows').className = 'animated slideOutUp';
   document.getElementById('nosotros').className = 'show animated slideInUp';
   document.getElementById('videos').className = 'animated slideOutUp';
@@ -189,6 +187,8 @@ function goToNosotrosM() {
 }
 
 function goBackToLink() {
+    
+    setTimeout(function(){
     var slides = $('.slide'),
         numOfSlides = slides.length;   
     
@@ -196,7 +196,7 @@ function goBackToLink() {
         if(slides[0].video.stopVideo !== null){
             slides[index].video.stopVideo();
         }     
-    }
+    }},2000);
     
     window.scrollTo(0, 0);    
     document.getElementById('links-mobile').className = 'show animated slideInUp';  
@@ -235,7 +235,7 @@ $(document).ready(function () {
         }
         $('.left').click(previousSlide);
         $('.right').click(nextSlide);
-    },5000);
+    },1000);
     
 })
 function onYouTubeIframeAPIReady() {
@@ -246,7 +246,7 @@ function onYouTubeIframeAPIReady() {
             // Create a new YT.Player from the iFrame, and store it on the `.slide` DOM object
             slide.video = new YT.Player(iframe)
         })
-    },2000);
+    },1000);
 }
 
 var settings = {
@@ -338,7 +338,7 @@ let OPT = {
     selector: "#sparks",
     amount: 5000,
     speed: 0.05, // pixels per frame
-    lifetime: 50,
+    lifetime: 55,
     direction: { x: -0.5, y: 1 },
     size: [2, 2],
     maxopacity: 1,
