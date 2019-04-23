@@ -14,6 +14,11 @@ a {
   color: transparent;
 }
 
+body.max, html.max {
+  overflow: auto!important;
+  max-height: 100% !important;
+}
+
 body {
     margin: 0;
     padding: 0;
