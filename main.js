@@ -24,7 +24,7 @@ function goToMusic() {
     document.getElementById('nosotrosLogo').className = 'not-shown';
     document.getElementById('normalLogo').className = 'not-shown';
     document.getElementById('links').className = 'desktop';
-    document.getElementById('musica').className = 'show animated slideInUp';
+    document.getElementById('musica').className = 'show animated slideInDown';
     document.getElementById('logo').className = 'not-shown';
     document.getElementById('fotos').className = ' animated slideOutUp';
     document.getElementById('logo-shows').className = 'not-shown';
@@ -82,8 +82,8 @@ function goToShows() {
     document.getElementById('musica').className = 'animated slideOutUp';
     document.getElementById('fotos').className = ' animated slideOutUp';
     document.getElementById('copyrights').className = ' ';
-    document.getElementById('logo-shows').className = 'animated slideInUp';
-    document.getElementById('shows').className = 'show animated slideInUp';
+    document.getElementById('logo-shows').className = 'animated slideInDown';
+    document.getElementById('shows').className = 'show animated slideInDown';
     document.getElementById('nosotros').className = 'animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
     document.body.className =  '';
