@@ -112,8 +112,8 @@ function goToMusicM() {
     document.getElementById('logo').className = 'animated slideOutUp';
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
-    document.getElementById('logo-shows-mobile').className = 'show animated slideOutDown';
-    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-shows-mobile').className = 'show animated slideOutUp';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutUp';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
     document.getElementById('fotos').className = '';
@@ -128,7 +128,7 @@ function goToFotosM() {
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
     document.getElementById('logo-shows-mobile').className = '';
-    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutUp';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
     document.getElementById('fotos').className = 'show animated slideInUp';
@@ -143,7 +143,7 @@ function goToShowsM() {
     document.getElementById('links-mobile').className = 'not-shown';
     document.getElementById('copyrights').className = 'not-shown';
     document.getElementById('logo-shows-mobile').className = 'show animated slideInUp';
-    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutUp';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('shows').className = 'show animated slideInUp';
     document.getElementById('mobile-close-icon').className = 'show animated bounceIn';
@@ -177,7 +177,7 @@ function goToNosotrosM() {
     document.getElementById('logo-shows-mobile').className = '';
     document.getElementById('logo-videos-mobile').className = '';
     document.getElementById('logo-nosotros-mobile').className = 'show animated slideInUp';
-    document.getElementById('logo-home-mobile').className = 'animated slideOutDown';
+    document.getElementById('logo-home-mobile').className = 'animated slideOutUp';
     document.getElementById('social-media').className = 'animated slideOutUp';
     document.getElementById('shows').className = ' animated slideOutUp';
     document.getElementById('videos').className = 'animated slideOutUp';
@@ -206,7 +206,7 @@ function goBackToLink() {
     document.getElementById('logo-nosotros-mobile').className = '';
     document.getElementById('shows').className = '';    
     document.getElementById('fotos').className = 'animated slideOutUp';  
-    document.getElementById('nosotros-mobile').className = 'not-shown animated slideOutDown';
+    document.getElementById('nosotros-mobile').className = 'not-shown animated slideOutUp';
     document.getElementById('social-media').className = 'show animated slideInDown';
     document.getElementById('logo-home-mobile').className = 'show animated slideInDown';
     document.getElementById('musica').className = 'animated slideOutUp';
