@@ -1,3 +1,10 @@
+function goToTienda() {
+  window.open(
+    'https://articulo.mercadolibre.com.ar/MLA-783176884-medias-valdes-merch-oficial-_JM?quantity=1&variation=35808288566',
+    '_blank'
+  );
+}
+
 function goToHome() {
     window.scrollTo(0, 0);
     document.getElementById('social-media').className = 'show';
